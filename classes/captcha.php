@@ -431,7 +431,8 @@ abstract class Captcha
 	{
 		// Output html element
 		if ($html === TRUE)
-			return '<img src="'.Subdomain_URL::site('captcha', 'sem').'" width="'.Captcha::$config['width'].'" height="'.Captcha::$config['height'].'" alt="Captcha" class="captcha" />';
+			//return '<img src="'.Subdomain_URL::site('captcha', 'sem').'" width="'.Captcha::$config['width'].'" height="'.Captcha::$config['height'].'" alt="Captcha" class="captcha" />';
+			return '<img src="/captcha" width="'.Captcha::$config['width'].'" height="'.Captcha::$config['height'].'" alt="Captcha" class="captcha" />';
 
 		// Send the correct HTTP header
         Request::current()->headers['Content-Type'] = 'image/'.$this->image_type;
